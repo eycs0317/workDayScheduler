@@ -39,7 +39,6 @@ $('.saveBtn').click(function() {
 
 var length = $('.description').length
 for(var i = 0; i < length; i++) {
-  var num = i + 9;
   var str = String(i + 9)
   console.log(typeof i )
   $('.description').eq(i).text(localStorage.getItem(str))
