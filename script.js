@@ -2,10 +2,6 @@ var today = moment()
 
 $('#currentDay').text(today.format('dddd, MMMM Do'))
 
-
-
-
-
 //check current hrs and set the color
 function setColorPerHours () {
   var currentHrs = Number(moment().format('HH'));
@@ -31,5 +27,25 @@ setColorPerHours() // need a timer on this
 
 //click for the button
 $('.saveBtn').click(function() {
-  console.log('click')
+  console.log($(this).siblings('textarea').val())
+  var userInput = $(this).siblings('textarea').val();
+  var timeBlock = $(this).siblings('h4').attr('id');
+  console.log(timeBlock)
+
+  localStorage.setItem(timeBlock, userInput);
+
 })
+
+
+var length = $('.description').length
+for(var i = 0; i < length; i++) {
+  var num = i + 9;
+  var str = String(i + 9)
+  console.log(typeof i )
+  $('.description').eq(i).text(localStorage.getItem(str))
+
+}
+
+
+
+
