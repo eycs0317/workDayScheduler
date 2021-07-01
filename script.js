@@ -6,7 +6,7 @@ $('#currentDay').text(today.format('dddd, MMMM Do'))
 function setColorPerHours () {
   var currentHrs = Number(moment().format('HH'));
 
-  // var currentHrs = 13 // for testing only
+  // currentHrs = 13 // for testing only
 
   $( "h4" ).each(function(index) {
     var hourBlockNum = parseInt($(this).attr('id'))
@@ -24,6 +24,8 @@ function setColorPerHours () {
 }
 
 setColorPerHours() // need a timer on this
+
+
 
 //click for the button
 $('.saveBtn').click(function() {
