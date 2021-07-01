@@ -6,7 +6,7 @@ Workdayscheduler is a Web App that build for the busy individual to save events 
 
 ## Getting Started
 
-git clone git@github.com:eycs0317/codeQuiz.git
+git clone git@github.com:eycs0317/workDayScheduler.git
 
 ## How to use
 1. Simply just type in the event you have in the time slot and click the button on the right side to save the event.
