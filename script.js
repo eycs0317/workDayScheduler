@@ -6,7 +6,7 @@ $('#currentDay').text(today.format('dddd, MMMM Do'))
 function setColorPerHours () {
   var currentHrs = Number(moment().format('HH'));
 
-  // currentHrs = 13 // for testing only
+  // currentHrs = 2 // for testing only
 
   $( "h4" ).each(function(index) {
     var hourBlockNum = parseInt($(this).attr('id'))
@@ -24,18 +24,16 @@ function setColorPerHours () {
 }
 
 setColorPerHours() // need a timer on this
+setInterval(setColorPerHours,10000)
 
 
 
 //click for the button
 $('.saveBtn').click(function() {
-  console.log($(this).siblings('textarea').val())
   var userInput = $(this).siblings('textarea').val();
   var timeBlock = $(this).siblings('h4').attr('id');
-  console.log(timeBlock)
 
   localStorage.setItem(timeBlock, userInput);
-
 })
 
 
